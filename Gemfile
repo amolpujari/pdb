@@ -15,10 +15,14 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'mysql2'
 
+gem 'devise'
+gem 'omniauth-google-oauth2'
+gem 'google-api-client'
+
+gem 'activerecord-session_store'
 gem 'awesome_print'
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'bootstrap-sass'
-gem 'bourbon'
 gem 'commontator', '~> 5.1.0'
 gem 'exception_notification'
 gem 'font-awesome-rails'
@@ -34,15 +38,14 @@ gem 'summernote-rails'
 gem 'therubyracer', :platform=>:ruby
 gem 'workflow'
 
-
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
 end
 
 group :development do
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'letter_opener'
   gem 'rails_layout'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
