@@ -23,4 +23,6 @@ class User < ApplicationRecord
     self.provider && self.uid ? false : super
   end
 
+  enum role: { user: 0, admin: 1}
+
 end

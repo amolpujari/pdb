@@ -10,14 +10,56 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "theme/agency";
 
 img.social {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  margin-top: 4px;
+  margin-top: -10px;
 }
 
+.dropdown.open{
+  ul, ul > a, ul:hover, ul:hover > a:hover {
+    background: black !important;
+  }
+  a, a:hover {
+    background: transparent !important;
+  }
+}
+
+.navbar-dashboard {
+  background-color: black !important;
+  padding: 0 !important;
+  padding-top: 8px !important;
+
+  .dropdown.open{
+    ul, ul > a, ul:hover, ul:hover > a:hover {
+      background: black !important;
+    }
+    a, a:hover {
+      color: white;
+    }
+  }
+
+ .navbar-brand {
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    margin: 0 !important;
+    font-size: 2em !important;
+ }
+}
+
+.alert {
+  float: none;
+  position: absolute;
+  z-index: 99999;
+  top: 100px;
+  right: 10px;
+}

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
     path_names: { sign_in: '' }
 
   root "application#home"
+  get :dashboard, to: "dashboard#index"
 end

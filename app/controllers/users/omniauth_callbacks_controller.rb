@@ -6,12 +6,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       reset_session
       sign_in @user, :event => :authentication
       flash[:success] = "Logged in!"
+      redirect_to "/dashboard"
 
     else
       reset_session
       flash[:danger] = "Log in failed!"
+      redirect_to "/"
     end
-
-    redirect_to root_path
   end
 end
