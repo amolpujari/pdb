@@ -5,7 +5,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     elsif @user = User.from_omniauth(request.env["omniauth.auth"]) and @user.persisted?
       reset_session
       sign_in @user, :event => :authentication
-      flash[:success] = "Logged in!"
+      msg = "Welcome #{@user.first_name}!"
+      msg << "<br/>Your were last logged in on #{@user.last_sign_in_at}" if @user.last_sign_in_at
+      flash[:success] = msg.html_safe
       redirect_to "/dashboard"
 
     else

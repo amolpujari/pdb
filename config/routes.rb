@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   root "application#home"
   get :dashboard, to: "dashboard#index"
+  post "drive/callback", to: "drive#callback"
 end

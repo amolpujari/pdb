@@ -290,7 +290,5 @@ Devise.setup do |config|
 
   client_id = Rails.application.secrets[:google_client_id]
   client_secret = Rails.application.secrets[:google_secret]
-  config.omniauth :google_oauth2, client_id, client_secret, {
-    scope: "userinfo.email,userinfo.profile,user.phonenumbers.read,user.birthday.read,user.addresses.read,user.emails.read"
-  }
+  config.omniauth :google_oauth2, client_id, client_secret
 end
