@@ -18,6 +18,7 @@ gem 'mysql2'
 gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'google-api-client'
+gem 'google_drive'
 
 gem 'activerecord-session_store'
 gem 'awesome_print'

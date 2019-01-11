@@ -44,4 +44,7 @@ $(document).on('turbolinks:load', function () {
         }
     })
 
+    setInterval(function(){
+        $("#flash .alert").fadeOut(1000);
+    }, 20000);
 })
